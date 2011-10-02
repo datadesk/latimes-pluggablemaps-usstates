@@ -23,9 +23,8 @@ class County(models.Model):
     square_miles = models.FloatField(null=True, blank=True)
     is_state = models.BooleanField(default=True)
     
-    # Population
-    population_2000 = models.IntegerField(null=True, blank=True)
-    population_2010 = models.IntegerField(null=True, blank=True)
+    # The 2010 population
+    population = models.IntegerField(null=True, blank=True)
     
     # Boundaries
     GEOM_FIELD_LIST = ( # We can use this list later in views to exclude 
