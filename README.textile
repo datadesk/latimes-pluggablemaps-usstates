@@ -21,8 +21,33 @@ h2. Features
 * Geometry fields for three of the most common SRIDs.
 * Simplified geometry fields that thin down the data and make it easier to display many polygons on a single map.
 * A read-only admin for reviewing the data
-* The 2000 and 2010 Census population totals for each state.
+* The 2010 Census population total for each state.
 
 h2. Requirements
 
 Before you begin, you will need to have a Django project with GeoDjango's 'django.contrib.gis' app installed and configured. The official installation guide is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/install/. The official tutorial is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/tutorial/. Both are excellent.
+
+h2. Installation
+
+h3. 01. Install the source code
+
+You can download it from PyPi.
+<pre><code>pip install latimes-pluggablemaps-usstates</code></pre>
+
+Or, pull the trunk from github
+<pre><code>git clone git://github.com/datadesk/latimes-pluggablemaps-usstates.git</code></pre>
+
+h3. 02. Install the app in your Django project
+
+In settings.py's INSTALLED_APPS tuple, add the following.
+<pre><code>'us_states',</code></pre>
+
+h3. 03. Create the database tables
+
+From the shell, enter:
+<pre><code>python manage.py syncdb</code></pre>
+
+h3. 04. Load the data
+
+From the same shell, enter the following. Then go get a cup of coffee.
+<pre><code>python manage.py loadusstates</code></pre>
