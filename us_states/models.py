@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.gis.gdal import OGRGeometry, OGRGeomType
 
 
-class County(models.Model):
+class State(models.Model):
     """
     The 50 members of the United States, plus Puerto Rico and the
     District of Columbia.
