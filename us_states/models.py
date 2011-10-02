@@ -48,7 +48,7 @@ class County(models.Model):
     objects = models.GeoManager()
     
     class Meta:
-        ordering = ('state', 'full_name',)
+        ordering = ('name',)
         verbose_name = 'U.S. state'
         verbose_name_plural = 'U.S. states'
     
