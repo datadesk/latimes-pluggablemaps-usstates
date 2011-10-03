@@ -31,7 +31,7 @@ def all():
 
 def shp():
     """
-    Load the ESRI shapefile from the Census in the County model.
+    Load the ESRI shapefile from the Census in the State model.
     
     Example usage:
     
